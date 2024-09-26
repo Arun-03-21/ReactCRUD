@@ -1,0 +1,155 @@
+/* Container for the form and list with 3D effect */
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px; /* Increased for a more rounded effect */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15),
+    /* Larger, softer shadow for a lifted effect */ 0 5px 15px
+      rgba(0, 0, 0, 0.05); /* Additional shadow for a layered look */
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  animation: fadeIn 0.5s; /* Add fade-in effect */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Lift effect on hover */
+.container:hover {
+  transform: translateY(-10px); /* Slight lift */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(0, 0, 0, 0.07); /* Enhanced shadow on hover */
+}
+
+/* Style for form group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Style for form inputs with 3D effect */
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px; /* Increased padding for better spacing */
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* More rounded corners */
+  font-size: 16px;
+  box-sizing: border-box;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease; /* Include border-color in transition */
+}
+
+/* Input focus effect with 3D style */
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 3px 10px rgba(0, 123, 255, 0.2),
+    inset 0 0 5px rgba(0, 123, 255, 0.1); /* Highlight on focus */
+  outline: none;
+  transform: translateY(-2px); /* Slight lift on focus */
+}
+
+/* Style for the button with 3D effect */
+button {
+  width: 100%;
+  padding: 12px; /* Increased padding for more prominent button */
+  margin-top: 15px;
+  background: linear-gradient(145deg, #007bff, #0056b3); /* Gradient for depth */
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Button shadow */
+}
+
+/* Button hover effect with more prominent 3D style */
+button:hover {
+  background: linear-gradient(145deg, #0056b3, #007bff); /* Reverse gradient on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+  animation: pulse 0.3s; /* Add pulse animation on hover */
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
+
+/* Styles for the table container with 3D effect */
+.dataTable {
+  margin-top: 20px; /* Adjust space between form and table */
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.05); /* Enhanced shadow for depth */
+  border-radius: 16px; /* More rounded corners */
+  max-width: 100%;
+  overflow-x: auto; /* Adds horizontal scroll for smaller screens */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Lift effect on hover for dataTable */
+.dataTable:hover {
+  transform: translateY(-5px); /* Slight lift */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.07); /* Enhanced shadow on hover */
+}
+
+/* Basic table styling */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Removes the gap between cells */
+}
+
+thead {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+thead th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+tbody td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  tbody td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
